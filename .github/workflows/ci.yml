@@ -3,7 +3,6 @@ name: ML CI with Docker
 on:
   push:
     branches: [ "main" ]
-  pull_request: 
 
 jobs:
   test:
