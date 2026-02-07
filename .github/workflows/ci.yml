@@ -1,4 +1,4 @@
-name: CI Test
+name: ML CI with Docker
 
 on:
   push:
@@ -9,4 +9,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CI is running 🎉"
+      - name : Checkout code
+        uses : action/checkout@v4
+      - name: Build Docker image
+        run: docker build -t ml-quality
+      - name: Run ML Container
+        run: docker run ml-quality
+        
