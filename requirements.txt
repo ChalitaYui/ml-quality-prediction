@@ -1,4 +1,4 @@
-nunpy
+numpy
 pandas
 scikit-learn
 joblib
