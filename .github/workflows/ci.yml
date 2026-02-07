@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Checkout code
-        uses : action/checkout@v4
+        uses : actions/checkout@v4
       - name: Build Docker image
-        run: docker build -t ml-quality
+        run: docker build -t ml-quality .
       - name: Run ML Container
         run: docker run ml-quality
         
